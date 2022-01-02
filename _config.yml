@@ -52,7 +52,7 @@ plainwhite:
 
 # Build settings
 remote_theme: samarsault/plainwhite-jekyll
-disqus_shortname: 'vxsparsh-1'
+disqus_shortname: vxsparsh-1
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
