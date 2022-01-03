@@ -7,7 +7,6 @@ layout: default
     <h2 class="post-title">{{ page.title | escape }}</h2>
   </a>
   <div class="post-meta">
-    <a href="#disqus_thread">Post a comment</a>
     <div class="post-date"><i class="icon-calendar"></i>{{ page.date | date: date_format }}</div>
     {%- if page.categories.size > 0 -%}
     <ul class="post-categories">
@@ -20,6 +19,9 @@ layout: default
   <div class="post">
     {{ content }}
   </div>
+  <br>
+  <hr>
+  <br>
   {%- if page.comments -%}
   <div id="disqus_thread"></div>
   <script>
