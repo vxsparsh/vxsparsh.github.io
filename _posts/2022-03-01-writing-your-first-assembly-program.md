@@ -68,7 +68,7 @@ The return address is outside of the stack frame. All th space b/w esp & ebp is 
 ## HELLO WORLD IN ASSEMBLY
 Although its not really necessary to learn how to write in assembly just understanding how to read it will be enough. But hey it won't hurt to do a little hello world program will it ?
 
-```assembly
+```
 BITS 32
 
 extern printf
@@ -118,7 +118,11 @@ hello, world!
 ```
 
 Well this is it guys, hope you liked this blog. If you did share it and drop a comment below.
+
 [Discord](https://discord.gg/nXDRcFe)
+
 [Twitter](https://twitter.com/0xSN1PE)
+
 [Linkedin](https://www.linkedin.com/in/sparsh-anand-9842421b2)
+
 [Github](https://github.com/vxsparsh)
