@@ -61,7 +61,7 @@ Lets talk about the two special purpose registers we mentioned earlier (esp, ebp
 
 **esp** (stack pointer) → contains the address of the top of current stack frame.
 
-> All the addresses outside of the current stack frame are called JUNK by the compiler.
+All the addresses outside of the current stack frame are called JUNK by the compiler.
 
 The return address is outside of the stack frame. All th space b/w esp & ebp is considered the stack frame.
 
