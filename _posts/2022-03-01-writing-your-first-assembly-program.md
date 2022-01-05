@@ -29,7 +29,7 @@ There are various syntax assembly is written in which the instructions are same,
 
 ## REGISTERS
 
-Registers are the small storage areas in the processor. They are used to store memory address, values or anything that can be represented with 8 bytes *(8 Bytes = 64 Bits. A byte is 8 bits. It can store up to 28 (256) different values, or one character of ASCII text. A bit is the basic unit of information.)* or less.
+Registers are the small storage areas in the processor. They are used to store memory address, values or anything that can be represented with 4 bytes *(4 Bytes = 32 Bits. A byte is 8 bits. It can store up to 28 (256) different values, or one character of ASCII text. A bit is the basic unit of information.)* or less.
 
 In x86 Architecture there are 6 general purpose registers.
 
@@ -47,9 +47,10 @@ These registers are generally use as they are needed. There are 3 purpose that a
 3. eip
 
 ## STACK
-The stack is a data structure comprised of elements that are added or removed with 2 operations **push** or **pop.** 
+The stack is a data structure comprised of elements that are added or removed with operations- **push** or **pop** and **ret** .
 
-push adds an element to the top of the stack & pop removes an element from the top of the stack. 
+push adds an element to the top of the stack & pop removes an element from the top of the stack.
+The ret instruction transfers control to the return address located on the stack
 
 Each element on a stack is assigned a stack address. Elements that are higher on the stack have lower address than those on the bottom of the stack. In other words stack grows towards lower memory address.
 
@@ -92,7 +93,7 @@ section .text
         pop ebp
         ret
 ```
-save this file as whatever file name yo want but add .asm in last.
+save this file as whatever file name you want but add .asm in last.
 Now we will compile this file and run it. Before compiling there are some packages you need to install (i am using ubuntu, if you are using other operating system then you might have to look up these packages for your os.)
 
 - nasm
