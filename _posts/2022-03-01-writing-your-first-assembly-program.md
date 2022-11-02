@@ -2,7 +2,7 @@
 layout: post
 title:  "Writing your first assembly program"
 date:   2022-01-03
-categories: gdb reverse-engineering
+categories: reverse-engineering
 ---
 Assembly is a low level programming language and is used to communicate directly with a computer hardware. Unlike machine language which consists of binary and hex characters, assembly language is readable by humans. 
 

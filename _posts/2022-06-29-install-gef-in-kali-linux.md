@@ -2,7 +2,7 @@
 layout: post
 title: "How to install GEF (GDB Extension) in Kali Linux"
 date: 2022-07-02
-categories: gdb reverse-engineering
+categories: reverse-engineering gdb
 ---
 
 Hey guys, how are you all doing. In this post i will guide you through the installation process of gef. Gef is an extension for GDB (Gnu Debugger), gef enhances
