@@ -6,11 +6,6 @@ categories: pwn
 ---
 
 Hey everyone, I am writing a blog after a very long time. In this blog i will take you through the installation process of pwntools and its command-line tools in kali linux.
-
-<br>
-
-# What is Pwntools ?
-
 Pwntools is a python ctf library designed for rapid exploit development. It essentially help us write exploits quickly, and has a lot of useful functionality behind it. Also one thing to note, pwntools has Python2 and Python3 versions. (Source: guyinatuxedo.github.io)
 
 # Installation Process
