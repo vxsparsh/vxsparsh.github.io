@@ -26,9 +26,14 @@ from pwn import *
 If this command executes without any errors then pwntools is correctly installed.
 
 # Installing Command-Line Tools
-To install the pwn command line tools open a new terminal and type ```nano .zshrc``` if you are using zsh. If you are using bash then type ```nano .bashrc```.
+To install the pwn command line tools open a new terminal and type 
+```nano .zshrc``` 
+if you are using zsh. If you are using bash then type
+ ```nano .bashrc```
+
 Go to the bottom of the file and type:
 ```export PATH="/home//kali/.local/bin$PATH"```
+
 and save the file. Open a new terminal and type pwn to verify the command line tools are working.
 
 
