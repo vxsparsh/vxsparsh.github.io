@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to install Pwn Tools + Command-Line Tools in Kali Linux"
+title: "How to install Pwntools + Command-Line Tools in Kali Linux"
 date: 2023-04-05
 categories: reverse-engineering pwn python
 ---
