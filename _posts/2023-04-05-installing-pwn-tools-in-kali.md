@@ -29,7 +29,7 @@ To be able to use pwn command-line tools you need to add the .local/bin folder i
 
 `export PATH="home/kali/.local/bin$PATH"`
 
-assuming your current username is kali, if not change `kali to your username` in the above command. Save the file and open a new terminal and type pwn to check if the command line tools are working.
+assuming your current username is kali, if not change **kali** to your **username** in the above command. Save the file and open a new terminal and type pwn to check if the command line tools are working.
 
 
 
