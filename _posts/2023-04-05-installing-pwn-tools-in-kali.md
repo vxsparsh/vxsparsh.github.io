@@ -1,30 +1,36 @@
 ---
 layout: post
-title: "How to install Pwn Tools in Kali Linux"
+title: "How to install Pwn Tools + Command-Line Tools in Kali Linux"
 date: 2023-04-05
-categories: reverse-engineering gdb
+categories: reverse-engineering pwn python
 ---
 
-Hey guys, how are you all doing. In this post i will guide you through the installation process of gef. Gef is an extension for GDB (Gnu Debugger), gef enhances
-the existing features of gdb to help with reverse engineering and rapid exploitation of linux binaries. So lets get started with the installation.
+Hey everyone, its been a while since I have posted a blog. In this post i will guide you through the installation process of Pwntools and its command line tools.
+pwntools is a CTF framework and exploit development library. Written in Python, it is designed for rapid prototyping and development, and intended to make exploit writing as simple as possible.
 
-The whole installation guide is available on [hugsy.github.io/gef/](https://hugsy.github.io/gef/)
+The whole installation guide is available on [https://docs.pwntools.com/en/stable/install.html](https://docs.pwntools.com/en/stable/install.html)
 
-# Install GDB & Other Dependencies
+# Installing Pwntools
 
-Now first of all make sure gdb and python3 is installed and working:
+Just copy and paste the following commands one by one in your terminal.
 
-`sudo apt-get install gdb python3 python3-pip`
+```
+sudo apt-get update
+sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+sudo python3 -m pip install --upgrade pip
+sudo python3 -m pip install --upgrade pwntools
+```
 
-And verify by running gdb, python3 and pip3 (or pip)
+And verify by running `from pwn import *` in python3 shell
 
-# Installing GEF
+# Installing Command-Line TOols
 
-Now according to the official documentation you only have to run one command and it will install everything.
+To be able to use pwn command-line tools you need to add the .local/bin folder in your home directory to path. You can do so by putting the following line in your bashrc or zshrc file.
 
-`bash -c "$(curl -fsSL https://gef.blah.cat/sh)"`
+`export PATH="home/kali/.local/bin$PATH"`
 
-Wait till the installation is done and run gdb to check if gef is working properly.
+assuming your current username is kali, if not change `kali to your username` in the above command. Save the file and open a new terminal and type pwn to check if the command line tools are working.
+
 
 
 EOF
