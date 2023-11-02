@@ -1,4 +1,4 @@
-title: Sparsh Anand - Cybersecurity & Development Blog
+title: Cybersecurity & Development Blog
 author: vxsparsh
 email: iamsnipe@protonmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
@@ -12,7 +12,7 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: Sparsh Anand
+  name: Snipesec
   tagline: Hacker. Developer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
@@ -26,9 +26,9 @@ plainwhite:
     - post
   # generate social links in footer
   social_links:
-    twitter: 0xSN1PE
-    github:  vxsparsh
-    linkedIn: in/notsparsh
+    #twitter: 0xSN1PE
+    #github:  vxsparsh
+    #linkedIn:
     #dribbble: jekyll
     #flickr:   jekyll
     #instagram: jekyll
