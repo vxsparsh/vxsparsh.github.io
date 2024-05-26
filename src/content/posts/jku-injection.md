@@ -1,7 +1,7 @@
 ---
 title: Bypassing JWT authentication through jku header injection
 published: 2024-05-26
-description: ''
+description: 'Bypassing JWT security through JKU header injection to manipulate authentication'
 image: ''
 tags: ['webappsec', 'jwt']
 category: 'webapp-pentesting'
