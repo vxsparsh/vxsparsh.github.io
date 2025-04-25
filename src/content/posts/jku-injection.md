@@ -100,7 +100,7 @@ If you try to change the path from `/my-account` to `/admin` and then send the r
 Now head over to the JWT Editor tab on the main menu bar and click on `New RSA Key` and click on generate, then click on OK.
 This will generate a pair of RSA Keys that we will use to bypass the authentication.
 
-Now right click on the generated RSA Key in the JWT Editor tab and click on `Copy Public Ket as JWK`.
+Now right click on the generated RSA Key in the JWT Editor tab and click on `Copy Public Key as JWK`.
 Now head over to the application in the browser and open the exploit server. In the body section, create an empty jwk set like this:
 
 ```
