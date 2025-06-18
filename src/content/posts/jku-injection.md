@@ -93,7 +93,7 @@ Make sure burp is running, then login into your account with the provided creden
 
 Go to burp > Proxy > HTTP History and send the `GET /my-account` request to burp repeater and switch to the JSON Web Token tab.
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 If you try to change the path from `/my-account` to `/admin` and then send the request, the application with respond with 401 Unauthorized.
 
@@ -141,7 +141,7 @@ Now we will sign the jwt with the RSA key we generated at the bottom click sign 
 
 Now we are all set, make sure to check the path is set to /admin and click on Send to send the request.
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 And we have successfully bypassed the jwt authentication.
 
