@@ -87,7 +87,7 @@ Flags:
 - **-dc-ip**: domain controller ip
 - **-vulnerable**: find vulnerable templates on the dc
 - **-enabled**: search for enabled/working templates only
-- **-stdout**: standard output, output the result of terminal instead to writing them to files which certipy-ad does by default (it creates a mess).
+- **-stdout**: standard output, output the result of terminal instead of writing them to files which certipy-ad does by default (it creates a mess).
 
 We get the result and one of the templates is vulnerable to ESC1 because it has 2 particular parameters: *Enrollee supplies subject* and template allows *client authentication*
 
