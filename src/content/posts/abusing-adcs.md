@@ -93,6 +93,8 @@ We get the result and one of the templates is vulnerable to ESC1 because it has 
 
 ![vuln template](./images/adcs-abuse/vuln_template.png)
 
+2. **Requesting Administrator's certificate:**
+
 Now that we know the target template and its details, we can abuse it to issue administrator user's certificate and get access to target system as admin. This is also done using certipy-ad
 
 ```
@@ -113,6 +115,8 @@ Other than the flags i discussed above here are what the other flags are for,
 
 This will request a certificate for administrator user from the AD CS and save it as a **.pfx** (personal information exchange file) file on our system.
 ![admin certificate dumped](./images/adcs-abuse/admin_cert.png)
+
+3. **Dumping Administrator's NTLM hash using the PFX file:**
 
 Now we can use certipy-ad to use the administrator.pfx file and dump the ntlm hash for administrator user:
 
