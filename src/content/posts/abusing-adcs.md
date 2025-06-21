@@ -81,13 +81,13 @@ certipy-ad find -u "ryan.cooper@sequel.htb" -p "NuclearMosquito3" -dc-ip 10.10.1
 ```
 
 Flags:
-- find: certipy-ad option for enabling certificate enumeration
-- -u: username
-- -p: password
-- -dc-ip: domain controller ip
-- -vulnerable: find vulnerable templates on the dc
-- -enabled: search for enabled/working templates only
-- -stdout: standard output, output the result of terminal instead to writing them to files which certipy-ad does by default (it creates a mess).
+- **find**: certipy-ad option for enabling certificate enumeration
+- **-u**: username
+- **-p**: password
+- **-dc-ip**: domain controller ip
+- **-vulnerable**: find vulnerable templates on the dc
+- **-enabled**: search for enabled/working templates only
+- **-stdout**: standard output, output the result of terminal instead to writing them to files which certipy-ad does by default (it creates a mess).
 
 We get the result and one of the templates is vulnerable to ESC1 because it has 2 particular parameters: *Enrollee supplies subject* and template allows *client authentication*
 
@@ -106,10 +106,10 @@ certipy-ad req -u 'ryan.cooper@sequel.htb' \
 
 Flag:
 Other than the flags i discussed above here are what the other flags are for,
-- req: certipy-ad option requesting certificate
-- -target: specify target domain
-- -ca: Name of the certificate authority, can be found on the result of vulnerable template enumeration we did previously
-- -upn: User Principal Name of target user, i.e. Administrator
+- **req**: certipy-ad option requesting certificate
+- **-target**: specify target domain
+- **-ca**: Name of the certificate authority, can be found on the result of vulnerable template enumeration we did previously
+- **-upn**: User Principal Name of target user, i.e. Administrator
 
 This will request a certificate for administrator user from the AD CS and save it as a **.pfx** (personal information exchange file) file on our system.
 ![admin certificate dumped](./images/adcs-abuse/admin_cert.png)
@@ -121,8 +121,8 @@ certipy-ad auth -pfx administrator.pfx -dc-ip 10.10.11.202
 ```
 
 Flags:
-- auth: certipy-ad option for authentication
-- -pfx: specifying the pfx file to use
+- **auth**: certipy-ad option for authentication
+- **-pfx**: specifying the pfx file to use
 
 And we get the administrator ntlm hash that we can use with psexec, evil-winrm, etc to authenticate and access the target system as administrator.
 
