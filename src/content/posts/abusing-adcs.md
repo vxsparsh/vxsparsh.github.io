@@ -107,7 +107,7 @@ certipy-ad req -u 'ryan.cooper@sequel.htb' \
 ```
 
 Flag:
-Other than the flags i discussed above here are what the other flags are for,
+Other than the flags i discussed above here is what the other flags are for,
 - **req**: certipy-ad option requesting certificate
 - **-target**: specify target domain
 - **-ca**: Name of the certificate authority, can be found on the result of vulnerable template enumeration we did previously
