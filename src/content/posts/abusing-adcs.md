@@ -9,7 +9,7 @@ draft: false
 ---
 ## What is Active Directory Certificate Services (ADCS) ?
 
-Active Directory Certificate Services (AD CS) is a Windows Server role responsible fo issuing, managing and validating digital certificates within a public key infrastructure (PKI). Active Directory Certificate Services provides a secure and scalable platform for managing digital identities, ensuring the confidentiality, integrity and availability of information witin an organization.
+Active Directory Certificate Services (AD CS) is a Windows Server role responsible for issuing, managing and validating digital certificates within a public key infrastructure (PKI). Active Directory Certificate Services provides a secure and scalable platform for managing digital identities, ensuring the confidentiality, integrity and availability of information within an organization.
 
 
 ### Main components of Active Directory Certificate Services:
@@ -22,20 +22,20 @@ Active Directory Certificate Services (AD CS) is a Windows Server role responsib
 
 - **Public Key Infrastructure:** PKI manages certificates and public key encryption.
 
-- **Certificate Signing Request:** CSR is a messsage send to CA to request a signed certificate
+- **Certificate Signing Request:** CSR is a message send to CA to request a signed certificate
 
 - **Extended Key Usage:** Extended Key Usage are object indentifiers that define how a generated certificate may be used.
 
 ## Certificate Templates
 
-Since Acitve Directory Certificate Services is such a critical service, it usually runs on only a few selected domain controllers, normal users can't interact with the AD CS directly. Some organizations that are too large have administrator's that create and distribute each certificate manually, distributing certificates manually to each use is not feasible in larger organizations. This is where certificate templates come into action, AD CS administrators can create several templates that can allow users iwth the relevant permission to request a certificate themseleves. These certificate templates have specific parameters that define which user can request the certificate and what permissions are required.
+Since Active Directory Certificate Services is such a critical service, it usually runs on only a few selected domain controllers, normal users can't interact with the AD CS directly. Some organizations that are too large have administrator's that create and distribute each certificate manually, distributing certificates manually to each user is not feasible in larger organizations. This is where certificate templates come into action, AD CS administrators can create several templates that can allow users with the relevant permission to request a certificate themselves. These certificate templates have specific parameters that define which user can request the certificate and what permissions are required.
 
 ![CSR](./images/adcs-abuse/csr-1.png)
 Credit: SpecterOps
 
 ## What vulnerabilities can arise with Certificate Templates ?
 
-This vulnerability was researched and discovered by [SpecterOps](https://specterops.io/) and later disclosed in their [whitepaper](https://specterops.io/wp-content/uploads/sites/3/2022/06/Certified_Pre-Owned.pdf) in 2021. This whitepaper highlights how specific combination of parameters in certificate templates can be abused and lead to privilege esclation to domain administrator and persistent access for years.
+This vulnerability was researched and discovered by [SpecterOps](https://specterops.io/) and later disclosed in their [whitepaper](https://specterops.io/wp-content/uploads/sites/3/2022/06/Certified_Pre-Owned.pdf) in 2021. This whitepaper highlights how specific combination of parameters in certificate templates can be abused and lead to privilege escalation to domain administrator and persistent access for years.
 
 ## Format of a Certificate Template
 
@@ -66,11 +66,11 @@ whoami /all
 
 ![group membership](./images/adcs-abuse/priv1.png)
 
-Now that we know that our user is potentially part of the ADCS group, we can use [certipy-ad](https://github.com/ly4k/Certipy) - a very powerful tool for attacking and enumerating AD CS. It supports indentification and exploitation of ESC1-ESC16 vulnerabilities.
+Now that we know that our user is potentially part of the ADCS group, we can use [certipy-ad](https://github.com/ly4k/Certipy) - a very powerful tool for attacking and enumerating AD CS. It supports identification and exploitation of ESC1-ESC16 vulnerabilities.
 
-Cetipy-ad can be installed on kali linux using apt: `sudo apt-get install certipy-ad`
+Certipy-ad can be installed on kali linux using apt: `sudo apt-get install certipy-ad`
 
-> Note: certipy-ad goes to various updated often, so the commands and switched i am using in this blog works as of 21-06-2025, it may or may not work in future. So please reference the official documentation for certipy-ad on their github repository.
+> Note: certipy-ad goes to various updated often, so the commands and switches/flags I am using in this blog works as of 21-06-2025, it may or may not work in future. So please reference the official documentation for certipy-ad on their github repository.
 
 1. **Identifying vulnerable templates:**
 
@@ -129,4 +129,4 @@ And we get the administrator ntlm hash that we can use with psexec, evil-winrm, 
 ![admin hash](./images/adcs-abuse/admin_hash.png)
 
 ## Conclusion
-In this blog we discussed about Active Directory Certificate Services, its components, working of certificate templates specterops discovery and research of certificate template abuse. Then we discussed template vulnerabilities (ESC), how we identify esc1 vulnerability using certipy-ad, how to request administrator's certificate using certipy-ad and then dumping the ntlm hash of admin that can be further used for authentication via various protocols like winrm, smb, etc.
+In this blog we discussed about Active Directory Certificate Services, its components, working of certificate templates SpecterOps discovery and research of certificate template abuse. Then we discussed template vulnerabilities (ESC), how we identify esc1 vulnerability using certipy-ad, how to request administrator's certificate using certipy-ad and then dumping the NTLM hash of the administrator, which can then be used for authentication via various protocols like winrm, smb, etc.
