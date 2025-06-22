@@ -9,8 +9,7 @@ draft: false
 ---
 ## What is Active Directory Certificate Services (ADCS) ?
 
-Active Directory Certificate Services (AD CS) is a Windows Server role responsible for issuing, managing and validating digital certificates within a public key infrastructure (PKI). Active Directory Certificate Services provides a secure and scalable platform for managing digital identities, ensuring the confidentiality, integrity and availability of information within an organization.
-
+Active Directory Certificate Services (AD CS) is a Windows Server role responsible for issuing, managing and validating digital certificates within a public key infrastructure (PKI). Active Directory Certificate Services provides a secure and scalable platform for managing digital identities, ensuring the confidentiality, integrity and availability of information within an organization. Active Directory Certificate Services is currently supported in all major versions of windows server: Windows Server 2025, 2022, 2019, 2016, and 2012 R2.
 
 ### Main components of Active Directory Certificate Services:
 
