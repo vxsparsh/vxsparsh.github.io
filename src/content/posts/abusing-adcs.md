@@ -69,7 +69,7 @@ Now that we know that our user is potentially part of the ADCS group, we can use
 
 Certipy-ad can be installed on kali linux using apt: `sudo apt-get install certipy-ad`
 
-> Note: certipy-ad goes to various updated often, so the commands and switches/flags I am using in this blog works as of 21-06-2025, it may or may not work in future. So please reference the official documentation for certipy-ad on their github repository.
+> Note: certipy-ad often goes through various updates, so the commands and switches/flags I am using in this blog works as of 21-06-2025, it may or may not work in future. So please reference the official documentation for certipy-ad on their github repository.
 
 1. **Identifying vulnerable templates:**
 
