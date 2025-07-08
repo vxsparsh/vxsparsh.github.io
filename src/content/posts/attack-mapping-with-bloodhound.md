@@ -86,9 +86,9 @@ And it can be accessed by running `bloodhound-ce-python` in the terminal.
 Now, it's hectic to run bloodhound by always going into the installation directory and running docker-compose to start bloodhound. So we will create bash aliases for starting, stopping bloodhound and one for bloodhound-python so that we don't have to type bloodhound-ce-python every time and since bloodhound-python (legacy version) is installed by default in kali, we dont want to uninstall it and break any packages so let's just override it by creating a bash alias. Add the following in your `~/.zshrc` or `~/.bashrc` file:
 
 ```bash
-alias bloodhound="docker compose -f /home/kali/tools/bloodhound/docker-compose.yml up -d"
+alias bloodhound="docker compose -f /path/to/bloodhound/docker-compose.yml up -d"
 
-alias bloodhound-stop="docker compose -f /home/kali/tools/bloodhound/docker-compose.yml stop"
+alias bloodhound-stop="docker compose -f /path/to/bloodhound/docker-compose.yml stop"
 
 alias bloodhound-python="bloodhound-ce-python"
 ```
