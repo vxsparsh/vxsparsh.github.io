@@ -150,6 +150,7 @@ Edges are the arrow-like shapes that connect two nodes together, each edge is la
 - **ForceChangePassword** – Enables password changes for a user account without needing to know the current password.
 - **DCSync** – Grants the ability to replicate domain controller data, which can be used to extract credentials from the domain.
 
+Complete list of edges can be found in the official [documentation](https://bloodhound.specterops.io/resources/edges/overview).
 
 ## Mapping Attack Paths with Bloodhound
 For this blog I will be using a retired machine from HackTheBox: [Administrator](https://app.hackthebox.com/machines/634)
