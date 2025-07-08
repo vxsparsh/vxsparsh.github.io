@@ -1,7 +1,7 @@
 ---
 title: Attack Mapping with Bloodhound
 published: 2025-07-08
-description: 'Learn about bloodhound, its installation, about ingestors and usage. Mapping attack paths with bloodhound.'
+description: 'Learn about bloodhound, its installation, about ingestors and their usage and mapping attack paths with bloodhound.'
 image: ''
 tags: ['bloodhound', 'postexp']
 category: 'active-directory'
