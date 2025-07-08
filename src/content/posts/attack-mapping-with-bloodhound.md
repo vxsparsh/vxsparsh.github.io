@@ -191,5 +191,10 @@ We can access Cypher by clicking on Cypher at the top, its right beside pathfind
 
 We can also use our own Cypher query, check out this [documentation](https://bloodhound.specterops.io/analyze-data/bloodhound-gui/cypher-search#what-is-cypher) by SpecterOps for further reference on how to use cypher in bloodhound.
 
+## Deleting Data from Bloodhound
+If you want to delete your ingested bloodhound data once you are done with your work so that it does not conflict with other data that you add into bloodhound in future access Administration from the side menu and then select **Database Management**, here select all the checkboxes and click delete, it will prompt you to input a keyword, after inputting that keyword select delete and wait for a while, the ingested data will be deleted from bloodhound database.
+
+![alt text](./images/bloodhound/s10.png)
+
 ## Conclusion
-In this blog, we discussed the introduction to bloodhound, data collectors or ingestors, installing bloodhound on kali linux, installing ingestors, collecting data using various ingestors like sharphound, bloodhound-python and netexec. We also learned about common nodes and edges in bloodhound. Then we looked at a little example on how to use bloodhound and all the main components of bloodhound like the search functionality, pathfinding and cypher. And we looked at what to look out for when going through data in bloodhound i.e. Outbound Object Control.
+In this blog, we discussed the introduction to bloodhound, data collectors or ingestors, installing bloodhound on kali linux, installing ingestors, collecting data using various ingestors like sharphound, bloodhound-python and netexec. We also learned about common nodes and edges in bloodhound. Then we looked at a little example on how to use bloodhound and all the main components of bloodhound like the search functionality, pathfinding and cypher. And we looked at what to look out for when going through data in bloodhound i.e. Outbound Object Control. Deleting data from bloodhound once we are done with our work.
