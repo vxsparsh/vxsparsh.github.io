@@ -1,7 +1,7 @@
 ---
 title: Abusing Active Directory Certificate Services
 published: 2025-06-21
-description: 'Learn about the significance active directory certificates in pentesting, abusing ADCS and ESC1 attack.'
+description: 'Learn about the significance of active directory certificates in pentesting, abusing ADCS and ESC1 attack.'
 image: ''
 tags: ['adcs', 'ESC1']
 category: 'active-directory'
