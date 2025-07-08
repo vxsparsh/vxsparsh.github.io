@@ -100,7 +100,7 @@ alias bloodhound-python="bloodhound-ce-python"
 ## Collecting data using Ingestors
 There are various ways to collect data for bloodhound using the ingestors sharphound and bloodhound-python:
 
-##### Using Sharphound
+#### Using Sharphound
 The first step of using sharphound to collect data is uploading it to the target system. There are various ways to do this, using a python http web server or upload it directly if you're using evil-winrm. Once it's uploaded use the following command to collect data:
 
 ```
@@ -115,14 +115,14 @@ The same can be done with the powershell script if the `.exe` does not work, upl
 
 Invoke-Bloodhound -c All -d <domain> --zipfilename loot.zip
 ```
-##### Using bloodhound-python
+#### Using bloodhound-python
 bloodhound-python can be used when we dont have remote access to the target system and its not possible to upload the sharphound binary onto the system. Or when we have an initial credential provided (in case of an assumed breach scenario) its generally good practice to run bloodhound-python first:
 
 ```bash
 bloodhound-python -u "<username>" -p "<password>" -d <parent domain> -v --zip -c All -ns <target ip>
 ```
 
-##### Extra: Using Netexec
+#### Extra: Using Netexec
 Netexec can also be used for collecting data for bloodhound.
 
 ```bash
@@ -132,13 +132,13 @@ nxc ldap <ip> -u <user> -p <pass> --bloodhound --collection All --dns-server <ta
 ## Common Nodes and Edges Explained
 Now before we start using bloodhound, its important to understand the common nodes and edges in bloodhound so that you know what and where to look at when mapping attack paths with bloodhound.
 
-##### Common Nodes
+#### Common Nodes
 
 ![alt text](./images/bloodhound/s3.png)
 
 Complete list of nodes can be found in the official [documentation](https://bloodhound.specterops.io/resources/nodes/overview) at SpecterOps.
 
-##### Common Edges
+#### Common Edges
 
 Edges are the arrow-like shapes that connect two nodes together, each edge is labeled with something showing the permissions/privileges or other properties that one node has over another. Some of the interesting edges that you might want to look out for are:
 
@@ -155,7 +155,7 @@ Complete list of edges can be found in the official [documentation](https://bloo
 ## Mapping Attack Paths with Bloodhound
 For this blog I will be using a retired machine from HackTheBox: [Administrator](https://app.hackthebox.com/machines/634)
 
-##### Collecting Data and Uploading it to Bloodhound
+#### Collecting Data and Uploading it to Bloodhound
 This machine has an assumed breach scenario so we are already provided with a credential: `Olivia::ichliebedich`. We use the provided credential with bloodhound-python to gather data for bloodhound:
 
 ```bash
@@ -165,22 +165,22 @@ Now open bloodhound by visiting: http://localhost:8000/ and logging in using `ad
 
 ![alt text](./images/bloodhound/s4.png)
 
-##### The Bloodhound Explorer
+#### The Bloodhound Explorer
 Now go to the **Explorer** from the side menu and search the user (Olivia) that we have credential for and select the user. This will bring the user object into the main screen, now select the Olivia user object, right click on it and select **Add to Owned**. Adding objects to owned helps bloodhound figure out more accurate attack paths compared to non-owned objects. It's always a good practice to add objects to owned if you have them compromised.
 
 ![alt text](./images/bloodhound/s5.png)
 
-##### Outbound Object Control
+#### Outbound Object Control
 Now next steps is to check the **Outbound Object Control** of the selected object. Outbound Object Control means which objects our user can control or have privilege over. This can be found on the right side of the bloodhound ui after selecting the object under **Object Information** and scrolling down. Selecting Outbound Object Control will show us the privilege that our user has over the other object by connecting them with an edge. Our user olivia has **GenericAll** privilege over user Michael. GenericAll means that we have full control over the target object. 
 
 ![alt text](./images/bloodhound/s6.png)
 
-##### Pathfinding
+#### Pathfinding
 Now we know that we have complete control over user Michael, so next we check the outbound object control of user michael and find that Michael has **ForceChangePassword** privilege over use benjamin. We can see this complete attack path by going to Pathfinding next to where we searched our user olivia and entering Olivia in the start node input field and Benjamin in destination node. This will show us the complete path from our user olivia to benjamin.
 
 ![alt text](./images/bloodhound/s7.png)
 
-##### Relationship Information and Inbuilt Abuse Suggester
+#### Relationship Information and Inbuilt Abuse Suggester
 Now bloodhound also tells us the tools and commands we need to run to abuse these privileges mentioned on the edges. We can access that information by clicking on the edge and then check the Relationship Information on the right side of the bloodhound UI. Expanding the various subsections gives us information on how we can abuse the privilege on various systems. Since we do not have access to the target machine yet we will check the Linux abuse section. This gives us information about various tools, methods and commands that we can use to exploit that privilege.
 
 ![alt text](./images/bloodhound/s8.png)
