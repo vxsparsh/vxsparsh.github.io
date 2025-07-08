@@ -136,6 +136,8 @@ Now before we start using bloodhound, its important to understand the common nod
 
 ![alt text](./images/bloodhound/s3.png)
 
+Complete list of nodes can be found in the official [documentation](https://bloodhound.specterops.io/resources/nodes/overview) at SpecterOps.
+
 ##### Common Edges
 
 Edges are the arrow-like shapes that connect two nodes together, each edge is labeled with something showing the permissions/privileges or other properties that one node has over another. Some of the interesting edges that you might want to look out for are:
