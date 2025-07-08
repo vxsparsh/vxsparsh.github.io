@@ -5,7 +5,7 @@ description: 'Learn about bloodhound, its installation, about ingestors and usag
 image: ''
 tags: ['bloodhound', 'postexp']
 category: 'active-directory'
-draft: true
+draft: false
 ---
 ## What is Bloodhound ?
 BloodHound, developed by SpecterOps, is a cybersecurity tool designed to analyze and manage identity-based attack paths within Active Directory (AD) and Azure environments. As mentioned on the official website of [SpecterOps](https://specterops.io/bloodhound-community-edition/), BloodHound uses graph theory to reveal the hidden and often unintended relationships within an Active Directory, Entra and Azure environment. Attackers can use BloodHound to easily identify highly complex Attack Paths that would otherwise be impossible to identify quickly, and defenders can use BloodHound to identify and eliminate those same Attack Paths. BloodHound helps blue and red teams better understand privileged relationships in an Active Directory, Entra, and Azure environments.
