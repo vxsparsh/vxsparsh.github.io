@@ -195,7 +195,7 @@ We can access Cypher by clicking on Cypher at the top, its right beside pathfind
 We can also use our own Cypher query, check out this [documentation](https://bloodhound.specterops.io/analyze-data/bloodhound-gui/cypher-search#what-is-cypher) by SpecterOps for further reference on how to use cypher in bloodhound.
 
 ## Deleting Data from Bloodhound
-If you want to delete your ingested bloodhound data once you are done with your work so that it does not conflict with other data that you add into bloodhound in future access Administration from the side menu and then select **Database Management**, here select all the checkboxes and click delete, it will prompt you to input a keyword, after inputting that keyword select delete and wait for a while, the ingested data will be deleted from bloodhound database.
+If you want to delete your ingested bloodhound data once you are done with your work so that it does not conflict with other data that you add into bloodhound in future, access Administration from the side menu and then select **Database Management**, here select all the checkboxes and click delete, it will prompt you to input a keyword, after inputting that keyword select delete and wait for a while, the ingested data will be deleted from bloodhound database.
 
 ![alt text](./images/bloodhound/s10.png)
 
